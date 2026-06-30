@@ -26,7 +26,6 @@ app.delete("/banner", async (req, res) => {
 app.get("/banner/exist", async (req, res) => {
     const exist = await redis.exists(BANNER_KEY);
     res.json({ exist: Boolean(exist) });
-
 });
 
 app.listen(3000, (req, res) => {
